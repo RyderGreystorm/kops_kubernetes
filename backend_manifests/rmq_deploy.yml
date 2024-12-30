@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rmq-deployment
+  labels:
+    app: rmq
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: rmq
+  template:
+    metadata:
+      labels:
+        app: rmq
+    spec:
+      containers:
+      - name: rmq
+        image: rabbitmq:latest
+        ports:
+        - containerPort: 5672
+          name: rmq_port
+        env:
+          - name: RMQ_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                  name: app-secret
+                  key: rabbit-mq
+          - name: RMQ_USER
+            valueFrom:
+              secretKeyRef:
+                name: app-secret
+                key: rmq_user
+        resources:
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
+          requests:
+            cpu: "250m"
+            memory: "256Mi"
+        livenessProbe:
+          tcpSocket:
+            port: 5672
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          tcpSocket:
+            port: 5672
+          initialDelaySeconds: 10
+          periodSeconds: 5
