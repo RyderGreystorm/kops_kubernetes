@@ -15,7 +15,7 @@ spec:
         app: myapp
     spec:
       containers:
-      - name: vprofile_app
+      - name: vprofileapp
         image: vprocontainers/vprofileapp
         imagePullPolicy: Always
         ports:

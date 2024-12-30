@@ -42,6 +42,8 @@ spec:
           exec:
             command:
             - mysql
+            - "-uroot"
+            - "-p$(MYSQL_PASSWORD)"
             - "-e"
             - "SELECT 1"
           initialDelaySeconds: 20
