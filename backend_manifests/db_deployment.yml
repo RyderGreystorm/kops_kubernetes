@@ -19,7 +19,7 @@ spec:
         image: vprocontainers/vprofiledb
         ports:
         - containerPort: 3306
-          name: db_port
+          name: dbport
         env:
           - name: MYSQL_PASSWORD
             valueFrom:

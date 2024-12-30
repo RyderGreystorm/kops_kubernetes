@@ -20,7 +20,7 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
-          name: myapp_port
+          name: myappport
         resources:
           limits:
             cpu: "500m"

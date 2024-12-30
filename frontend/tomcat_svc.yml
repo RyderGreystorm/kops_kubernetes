@@ -8,5 +8,5 @@ spec:
   ports:
     - protocol: TCP
       port: 8080
-      targetPort: myapp_port
+      targetPort: myappport
   type: ClusterIP

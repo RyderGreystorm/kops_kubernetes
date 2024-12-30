@@ -8,5 +8,5 @@ spec:
   ports:
     - protocol: TCP
       port: 11211
-      targetPort: mc_port
+      targetPort: mcport
   type: ClusterIP

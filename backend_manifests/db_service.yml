@@ -8,5 +8,5 @@ spec:
   ports:
     - protocol: TCP
       port: 3306
-      targetPort: db_port
+      targetPort: dbport
   type: ClusterIP

@@ -19,7 +19,7 @@ spec:
         image: memcached:latest
         ports:
         - containerPort: 11211
-          name: mc_port
+          name: mcport
         resources:
           limits:
             cpu: "500m"
