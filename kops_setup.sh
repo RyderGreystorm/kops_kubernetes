@@ -35,21 +35,7 @@ install_aws_cli(){
     sudo snap install aws-cli --classic
 }
 
-create_cluster(){
-    kops create cluster --name=profile.devopsfetish.xyz \
-      --state=s3://biekro-kops \
-      --zones=us-east-1a,us-east-1b,us-east-1c \
-      --node-count=2 \
-      --node-size=t3.medium \
-      --control-plane-size=t3.medium \
-      --dns-zone=profile.devopsfetish.xyz \
-      --node-volume-size=25 \
-      --control-plane-volume-size=25 \
-      --ssh-public-key=~/.ssh/kops.pub
-}
-
 # functions call
 install_kops
 install_kubectl
 install_aws_cli
-create_cluster
