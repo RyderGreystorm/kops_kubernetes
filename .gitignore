@@ -1,2 +1,4 @@
 terraform_iac/.terraform*
 key_pair
+terraform.tfstate
+.gitignore

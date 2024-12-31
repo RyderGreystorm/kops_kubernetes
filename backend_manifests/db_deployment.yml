@@ -41,11 +41,9 @@ spec:
         readinessProbe:
           exec:
             command:
-            - mysql
-            - "-uroot"
-            - "-p$(MYSQL_PASSWORD)"
-            - "-e"
-            - "SELECT 1"
+              - sh
+              - "-c"
+              - "mysql -uroot -p$MYSQL_PASSWORD -e 'SELECT 1'"
           initialDelaySeconds: 20
           periodSeconds: 10
         resources:
