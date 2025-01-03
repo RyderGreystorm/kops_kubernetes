@@ -127,7 +127,7 @@ k8s_kops_fullstack_devops/
 - ingress.yml configures external access to frontend and backend services.
 
 ## Contact and Documentation
-- **Medium Article (Full Documentation)**: [Read the full project documentation on Medium](https://medium.com/@gbiekro/fullstack-devops-kubernetes-kops-project)
+- **Medium Article (Full Documentation)**: [Read the full project documentation on Medium](https://medium.com/@biekrogodbless/kubernetes-with-kops-kubernetes-operation-set-up-a37b01931ec9)
 - **LinkedIn**: [Godbless Biekro](https://www.linkedin.com/in/godbless-biekro-2289261ba/)
 - **Medium**: [Medium Profile](https://medium.com/@biekrogodbless)
 - **Email**: biekrogodbless@gmail.com
